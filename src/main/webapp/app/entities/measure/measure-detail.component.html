@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="measure">
+            <h2><span jhiTranslate="neumaticosApp.measure.detail.title">Measure</span> {{measure.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="neumaticosApp.measure.tiretype">Tiretype</span></dt>
+                <dd>
+                    <span>{{measure.tiretype}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.width">Width</span></dt>
+                <dd>
+                    <span>{{measure.width}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.height">Height</span></dt>
+                <dd>
+                    <span>{{measure.height}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.diameter">Diameter</span></dt>
+                <dd>
+                    <span>{{measure.diameter}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.speedrating">Speedrating</span></dt>
+                <dd>
+                    <span>{{measure.speedrating}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.load">Load</span></dt>
+                <dd>
+                    <span>{{measure.load}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.measure.detail">Detail</span></dt>
+                <dd>
+                    <span>{{measure.detail}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/measure', measure.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

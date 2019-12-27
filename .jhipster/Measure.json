@@ -1,0 +1,44 @@
+{
+    "name": "Measure",
+    "fields": [
+        {
+            "fieldName": "tiretype",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "width",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "height",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "diameter",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "speedrating",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "load",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191227130737",
+    "entityTableName": "measure",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

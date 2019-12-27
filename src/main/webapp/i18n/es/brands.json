@@ -1,0 +1,22 @@
+{
+  "neumaticosApp": {
+    "brands": {
+      "home": {
+        "title": "Brands",
+        "createLabel": "Crear nuevo Brands",
+        "createOrEditLabel": "Crear o editar Brands",
+        "notFound": "Ningún Brands encontrado"
+      },
+      "created": "Un nuevo Brands ha sido creado con el identificador {{ param }}",
+      "updated": "Un Brands ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Brands ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Brands {{ id }}?"
+      },
+      "detail": {
+        "title": "Brands"
+      },
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Itemcart",
+    "fields": [
+        {
+            "fieldName": "quantity",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "stock",
+            "otherEntityRelationshipName": "itemcart",
+            "relationshipName": "itemstock",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191227130740",
+    "entityTableName": "itemcart",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

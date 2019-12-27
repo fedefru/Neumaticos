@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-measure-heading" jhiTranslate="neumaticosApp.measure.home.createOrEditLabel">Create or edit a Measure</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.tiretype" for="field_tiretype">Tiretype</label>
+                    <input type="text" class="form-control" name="tiretype" id="field_tiretype"
+                           formControlName="tiretype"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.width" for="field_width">Width</label>
+                    <input type="number" class="form-control" name="width" id="field_width"
+                           formControlName="width"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.height" for="field_height">Height</label>
+                    <input type="number" class="form-control" name="height" id="field_height"
+                           formControlName="height"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.diameter" for="field_diameter">Diameter</label>
+                    <input type="number" class="form-control" name="diameter" id="field_diameter"
+                           formControlName="diameter"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.speedrating" for="field_speedrating">Speedrating</label>
+                    <input type="text" class="form-control" name="speedrating" id="field_speedrating"
+                           formControlName="speedrating"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.load" for="field_load">Load</label>
+                    <input type="number" class="form-control" name="load" id="field_load"
+                           formControlName="load"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="neumaticosApp.measure.detail" for="field_detail">Detail</label>
+                    <input type="text" class="form-control" name="detail" id="field_detail"
+                           formControlName="detail"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{
+    "name": "Method",
+    "fields": [
+        {
+            "fieldName": "method",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191227130739",
+    "entityTableName": "method",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

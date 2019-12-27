@@ -1,0 +1,63 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="neumaticosApp.itemcart.home.title">Itemcarts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-itemcart" [routerLink]="['/itemcart/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="neumaticosApp.itemcart.home.createLabel">
+            Create a new Itemcart
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="itemcarts?.length === 0">
+        <span jhiTranslate="neumaticosApp.itemcart.home.notFound">No itemcarts found</span>
+    </div>
+    <div class="table-responsive" *ngIf="itemcarts?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+            <th scope="col" ><span jhiTranslate="neumaticosApp.itemcart.quantity">Quantity</span></th>
+            <th scope="col" ><span jhiTranslate="neumaticosApp.itemcart.detail">Detail</span></th>
+            <th scope="col" ><span jhiTranslate="neumaticosApp.itemcart.itemstock">Itemstock</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let itemcart of itemcarts ;trackBy: trackId">
+                <td><a [routerLink]="['/itemcart', itemcart.id, 'view' ]">{{itemcart.id}}</a></td>
+                <td>{{itemcart.quantity}}</td>
+                <td>{{itemcart.detail}}</td>
+                <td>
+                    <div *ngIf="itemcart.itemstock">
+                        <a [routerLink]="['/stock', itemcart.itemstock?.id, 'view' ]" >{{itemcart.itemstock?.stock}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/itemcart', itemcart.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/itemcart', itemcart.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(itemcart)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

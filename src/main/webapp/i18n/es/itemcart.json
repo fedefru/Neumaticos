@@ -1,0 +1,24 @@
+{
+  "neumaticosApp": {
+    "itemcart": {
+      "home": {
+        "title": "Itemcarts",
+        "createLabel": "Crear nuevo Itemcart",
+        "createOrEditLabel": "Crear o editar Itemcart",
+        "notFound": "Ningún Itemcarts encontrado"
+      },
+      "created": "Un nuevo Itemcart ha sido creado con el identificador {{ param }}",
+      "updated": "Un Itemcart ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Itemcart ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Itemcart {{ id }}?"
+      },
+      "detail": {
+        "title": "Itemcart"
+      },
+      "quantity": "Quantity",
+      "detail": "Detail",
+      "itemstock": "Itemstock"
+    }
+  }
+}

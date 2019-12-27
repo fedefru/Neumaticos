@@ -1,0 +1,28 @@
+{
+  "neumaticosApp": {
+    "measure": {
+      "home": {
+        "title": "Measures",
+        "createLabel": "Crear nuevo Measure",
+        "createOrEditLabel": "Crear o editar Measure",
+        "notFound": "Ningún Measures encontrado"
+      },
+      "created": "Un nuevo Measure ha sido creado con el identificador {{ param }}",
+      "updated": "Un Measure ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Measure ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Measure {{ id }}?"
+      },
+      "detail": {
+        "title": "Measure"
+      },
+      "tiretype": "Tiretype",
+      "width": "Width",
+      "height": "Height",
+      "diameter": "Diameter",
+      "speedrating": "Speedrating",
+      "load": "Load",
+      "detail": "Detail"
+    }
+  }
+}

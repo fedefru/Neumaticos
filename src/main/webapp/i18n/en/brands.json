@@ -1,0 +1,22 @@
+{
+  "neumaticosApp": {
+    "brands": {
+      "home": {
+        "title": "Brands",
+        "createLabel": "Create a new Brands",
+        "createOrEditLabel": "Create or edit a Brands",
+        "notFound": "No Brands found"
+      },
+      "created": "A new Brands is created with identifier {{ param }}",
+      "updated": "A Brands is updated with identifier {{ param }}",
+      "deleted": "A Brands is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Brands {{ id }}?"
+      },
+      "detail": {
+        "title": "Brands"
+      },
+      "name": "Name"
+    }
+  }
+}

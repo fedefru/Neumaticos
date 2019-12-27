@@ -1,0 +1,50 @@
+{
+    "name": "Cart",
+    "fields": [
+        {
+            "fieldName": "shipping",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "itemcart",
+            "otherEntityRelationshipName": "cart",
+            "relationshipName": "items",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "usuarios",
+            "otherEntityRelationshipName": "cart",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "method",
+            "otherEntityRelationshipName": "cart",
+            "relationshipName": "method",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191227130741",
+    "entityTableName": "cart",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

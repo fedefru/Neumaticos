@@ -1,0 +1,22 @@
+{
+  "neumaticosApp": {
+    "method": {
+      "home": {
+        "title": "Methods",
+        "createLabel": "Crear nuevo Method",
+        "createOrEditLabel": "Crear o editar Method",
+        "notFound": "Ningún Methods encontrado"
+      },
+      "created": "Un nuevo Method ha sido creado con el identificador {{ param }}",
+      "updated": "Un Method ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Method ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Method"
+      },
+      "method": "Method"
+    }
+  }
+}

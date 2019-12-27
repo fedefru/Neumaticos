@@ -1,0 +1,47 @@
+{
+    "name": "Stock",
+    "fields": [
+        {
+            "fieldName": "stock",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "minimumstock",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maximumstock",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "stock",
+            "relationshipName": "product",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "branch",
+            "otherEntityRelationshipName": "stock",
+            "relationshipName": "branchname",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191227130743",
+    "entityTableName": "stock",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

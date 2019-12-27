@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="itemcart">
+            <h2><span jhiTranslate="neumaticosApp.itemcart.detail.title">Itemcart</span> {{itemcart.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="neumaticosApp.itemcart.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{itemcart.quantity}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.itemcart.detail">Detail</span></dt>
+                <dd>
+                    <span>{{itemcart.detail}}</span>
+                </dd>
+                <dt><span jhiTranslate="neumaticosApp.itemcart.itemstock">Itemstock</span></dt>
+                <dd>
+                    <div *ngIf="itemcart.itemstock">
+                        <a [routerLink]="['/stock', itemcart.itemstock?.id, 'view']">{{itemcart.itemstock?.stock}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/itemcart', itemcart.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

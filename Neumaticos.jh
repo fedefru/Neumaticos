@@ -1,0 +1,74 @@
+
+entity Usuarios {
+	name String,
+    surname String,
+	email String
+}
+
+entity Brands {
+	name String
+}
+
+entity Measure{
+	tiretype String,
+    width Double,
+    height Double, 
+    diameter Long, 
+    speedrating String,
+    load Long,
+    detail String 
+}
+entity Product {
+	
+    price Double,
+    detail String,
+}
+entity Method{
+	method String
+}
+
+entity Itemcart{
+    quantity Long,
+    detail String
+}
+
+entity Cart{
+    shipping Double, 
+    total Double,
+    detail String
+}
+
+entity Branch {
+	branchname String, 
+    address String,
+    telephone Long,
+    location String,
+    province String
+}
+
+
+
+entity Stock{	
+	stock Long,
+    minimumstock Long,
+    maximumstock Long,
+    detail String
+}
+
+
+
+relationship ManyToOne{
+	Stock{product} to Product,
+    Stock{branchname} to Branch,
+    
+    Cart{items} to Itemcart,
+    Cart{user} to Usuarios,
+    Cart{method} to Method,
+    
+    Itemcart{itemstock} to Stock,	
+    
+    Product{measure} to Measure,
+    Product{brands} to Brands,
+}
+
+

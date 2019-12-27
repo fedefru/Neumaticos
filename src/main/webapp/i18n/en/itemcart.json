@@ -1,0 +1,24 @@
+{
+  "neumaticosApp": {
+    "itemcart": {
+      "home": {
+        "title": "Itemcarts",
+        "createLabel": "Create a new Itemcart",
+        "createOrEditLabel": "Create or edit a Itemcart",
+        "notFound": "No Itemcarts found"
+      },
+      "created": "A new Itemcart is created with identifier {{ param }}",
+      "updated": "A Itemcart is updated with identifier {{ param }}",
+      "deleted": "A Itemcart is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itemcart {{ id }}?"
+      },
+      "detail": {
+        "title": "Itemcart"
+      },
+      "quantity": "Quantity",
+      "detail": "Detail",
+      "itemstock": "Itemstock"
+    }
+  }
+}
