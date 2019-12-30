@@ -14,6 +14,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
+import { CarouselHomeComponent } from './componentes/carousel-home/carousel-home.component';
+import { ProductItemComponent } from './componentes/product-list/product-item/product-item.component';
 
 @NgModule({
   imports: [
@@ -25,7 +27,16 @@ import { ErrorComponent } from './layouts/error/error.component';
     NeumaticosEntityModule,
     NeumaticosAppRoutingModule
   ],
-  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+  declarations: [
+    JhiMainComponent,
+    NavbarComponent,
+    ErrorComponent,
+    PageRibbonComponent,
+    ActiveMenuDirective,
+    FooterComponent,
+    CarouselHomeComponent,
+    ProductItemComponent
+  ],
   bootstrap: [JhiMainComponent]
 })
 export class NeumaticosAppModule {}
