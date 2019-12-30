@@ -5,26 +5,24 @@
 <div class="container-fluid">
     <div class="card jh-card">
         <router-outlet></router-outlet>
-        <jhi-carousel-home></jhi-carousel-home>
+        <!-- jhi-carousel-home></jhi-carousel-home -->
 
         <div class="row justify-content-center">
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
-            </div>
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
-            </div>
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
-            </div>
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
-            </div>
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
-            </div>
-            <div class="col-md3">
-                <jhi-product-item></jhi-product-item>
+            <div class="col-md3" *ngFor="let item of items">
+                <!-- jhi-product-item></jhi-product-item -->
+                <div style="width:15em" class="item-prod " >
+
+                    <img src="https://marketcar.vteximg.com.br/arquivos/ids/158801-800-800/BluEarth_Es_ES32_ProductPicture.jpg?v=636525828828170000" class="card-img-top" alt="...">
+                    <div class="card-body" >
+                        <h5 class="card-title">{{item}}</h5>
+                        <p class="card-text">{{item}}</p>
+                        <p class="card-text">$ {{item}}</p>
+
+                        <a href="#" class=" btn btn btn-outline-primary btn-sm">Add to Cart</a>
+                        <a href="#" class=" btn btn btn-outline-secondary btn-sm">Details </a>
+
+                    </div>
+                </div>
             </div>
 
         </div>

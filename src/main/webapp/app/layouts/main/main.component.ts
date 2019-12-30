@@ -8,6 +8,9 @@ import { JhiLanguageHelper } from 'app/core/language/language.helper';
   templateUrl: './main.component.html'
 })
 export class JhiMainComponent implements OnInit {
+  items: Array<string>;
+
+
   constructor(private jhiLanguageHelper: JhiLanguageHelper, private router: Router) {}
 
   private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
@@ -19,6 +22,8 @@ export class JhiMainComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.items = ['item1', 'item2', 'item3' ,'item4'];
+
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.jhiLanguageHelper.updateTitle(this.getPageTitle(this.router.routerState.snapshot.root));
