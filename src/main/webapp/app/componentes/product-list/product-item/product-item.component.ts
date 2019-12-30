@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpResponse } from '@angular/common/http';
+import { IProduct } from 'app/shared/model/product.model';
+import { ProductService } from '../../../entities/product/product.service';
 
 @Component({
   selector: 'jhi-product-item',
@@ -6,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent implements OnInit {
-  constructor() {}
+  items: IProduct[];
+  constructor(protected productService: ProductService) {}
 
-  ngOnInit() {}
+  loadAll() {
+    this.productService.query().subscribe((res: HttpResponse<IProduct[]>) => {
+      this.items = res.body;
+    });
+  }
+
+  ngOnInit() {
+    this.loadAll();
+  }
 }

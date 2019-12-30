@@ -6,26 +6,11 @@
     <div class="card jh-card">
         <router-outlet></router-outlet>
          <jhi-carousel-home></jhi-carousel-home>
-
-        <div class="row justify-content-center">
-            <div class="col-md3" *ngFor="let item of items">
-                <!-- jhi-product-item></jhi-product-item -->
-                <div style="width: 15em;margin:3em" class="items-prod" >
-
-                    <img src="https://marketcar.vteximg.com.br/arquivos/ids/158801-800-800/BluEarth_Es_ES32_ProductPicture.jpg?v=636525828828170000" class="card-img-top" alt="...">
-                    <div class="card-body" >
-                        <h5 class="card-title">{{item.brands?.name}}</h5>
-                        <p class="card-text">{{item.detail}}</p>
-                        <p class="card-text">$ {{item.price}}</p>
-
-                        <a href="#" class=" btn btn btn-outline-primary btn-sm">Add to Cart</a>
-                        <a href="#" class=" btn btn btn-outline-secondary btn-sm">Details </a>
-
-                    </div>
-                </div>
-            </div>
+        <jhi-product-item></jhi-product-item>
 
         </div>
+
+
     </div>
 
     <jhi-footer></jhi-footer>
